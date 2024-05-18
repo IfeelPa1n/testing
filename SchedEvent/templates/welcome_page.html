@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cebu Institute of Technology - Alerts</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+        background-image: url('{% static "img/AlertPaper.jpg" %}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .header-bg {
+      background-color: #fff568; /* Yellowish background color approximating the header in the image */
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-900">
+  <div class="header-bg py-8">
+    <h1 class="text-center text-2xl uppercase font-bold">Cebu Institute of Technology University</h1>
+    <h2 class="text-center text-4xl font-bold my-4">Team Alerts</h2>
+  </div>
+  <div class="flex justify-center items-center min-h-screen p-5">
+    <div class="m-4 p-12 bg-blue-600 rounded-lg flex flex-col items-center justify-center">
+      <a href="{% url 'SchedEvent:StudentVerificationStop' %}" class="p-4 bg-green-300 rounded-full text-black text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105">Student</a>
+    </div>
+    <div class="m-4 p-12 bg-red-600 rounded-lg flex flex-col items-center justify-center">
+      <a href="{% url 'SchedEvent:TeacherVerificationStop' %}" class="p-4 bg-green-300 rounded-full text-black text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105">Teacher</a>
+    </div>
+  </div>
+</body>
+</html>
